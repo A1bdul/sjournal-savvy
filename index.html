@@ -17,7 +17,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(to bottom right, #0e1e35, #14395a);
+      background: radial-gradient(circle at center, #6bb6ff 0%, #4a90e2 15%, #2c5aa0 35%, #1e3a5f 55%, #0f1419 80%, #000000 100%);
+      position: relative;
+      overflow: hidden;
       font-family: Arial, sans-serif;
     }
 
@@ -26,6 +28,22 @@
       max-width: 500px;
       padding: 20px;
       text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-container::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(107, 182, 255, 0.3) 0%, rgba(74, 144, 226, 0.2) 30%, rgba(44, 90, 160, 0.1) 50%, transparent 70%);
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(20px);
     }
 
     .logo-container img {
@@ -70,7 +88,7 @@
 <body>
   <div class="logo-container">
     <img src="photo_5156766155279543968_y (1).png" alt="Savvy Logo">
-    <a href="https://x.com/savvycoio" class="x-icon-button" target="_blank" aria-label="X profile">
+    <a href="https://x.com/savvycoioe" class="x-icon-button" target="_blank" aria-label="X profile">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M17.02 3h3.65l-7.98 9.17L22 21h-6.59l-5.21-6.28L4.02 21H.33l8.45-9.7L2 3h6.65l4.7 5.7L17.02 3Zm-1.27 16.41h1.68L7.33 4.45H5.54l10.21 14.96Z"/>
       </svg>
